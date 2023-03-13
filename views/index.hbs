@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cats">
+        {{#each cats}}
+          <div class="card">
+            <img src="{{this.image}}" alt="cat image" />
+            <h2>Name: {{this.name}}</h2>
+            <p>Age: {{this.age}}</p>
+            <p>Breed: {{this.breed}}</p>
+            <form method="post" action="/remove-cat/{{this.id}}">
+              <button type="submit">Take home</button>
+            </form>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</html>
